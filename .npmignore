@@ -1,4 +1,5 @@
-build.*
+build.ts
+build.js
 .gitignore
 tsconfig.json
 .prettierrc
