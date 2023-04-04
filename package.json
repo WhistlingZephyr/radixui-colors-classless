@@ -1,0 +1,43 @@
+{
+  "name": "radixui-colors-classless",
+  "version": "0.1.0",
+  "description": "Classless version of @radix-ui/colors",
+  "main": "build.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-js": "tsc && esbuild build.ts --bundle --platform=node --outfile=build.js",
+    "build-css": "node build.js",
+    "build": "pnpm run build-js && pnpm run build-css",
+    "format": "xo --fix .",
+    "lint": "xo .",
+    "prepublishOnly": "pnpm run lint",
+    "preversion": "pnpm run lint",
+    "version": "pnpm run format && git add .",
+    "postversion": "git push && git push --tags"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WhistlingZephyr/radixui-colors-classless.git"
+  },
+  "keywords": [
+    "radix-ui",
+    "colors",
+    "classless",
+    "css"
+  ],
+  "author": "WhistlingZephyr",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/WhistlingZephyr/radixui-colors-classless/issues"
+  },
+  "homepage": "https://github.com/WhistlingZephyr/radixui-colors-classless#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^17.5.1",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@types/node": "^18.15.11",
+    "esbuild": "^0.17.15",
+    "husky": "^8.0.3",
+    "typescript": "^5.0.3",
+    "xo": "^0.53.1"
+  }
+}
