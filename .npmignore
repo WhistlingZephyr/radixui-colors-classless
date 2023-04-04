@@ -1,0 +1,8 @@
+build.*
+.gitignore
+tsconfig.json
+.prettierrc
+.editorconfig
+commitlint.config.js
+pnpm-lock.yaml
+xo.config.js
