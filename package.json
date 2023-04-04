@@ -2,7 +2,6 @@
   "name": "radixui-colors-classless",
   "version": "0.1.2",
   "description": "Classless version of @radix-ui/colors",
-  "main": "build.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-js": "tsc && esbuild build.ts --bundle --platform=node --outfile=build.js",
