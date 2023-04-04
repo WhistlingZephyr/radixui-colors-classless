@@ -1,6 +1,7 @@
 build.ts
 build.js
 colors
+.husky
 .gitignore
 .gitmodules
 tsconfig.json
