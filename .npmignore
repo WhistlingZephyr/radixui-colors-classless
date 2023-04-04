@@ -1,6 +1,8 @@
 build.ts
 build.js
+colors
 .gitignore
+.gitmodules
 tsconfig.json
 .prettierrc
 .editorconfig

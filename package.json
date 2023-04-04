@@ -1,6 +1,6 @@
 {
   "name": "radixui-colors-classless",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Classless version of @radix-ui/colors",
   "main": "build.js",
   "scripts": {
