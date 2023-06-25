@@ -8,13 +8,13 @@ Promise.all(
             ? '[data-theme="dark"]'
             : '[data-theme="light"], :root:not([data-theme="dark"])';
 
-        const scaleAssCssProperties = Object.entries(scale)
+        const scaleAsCssProperties = Object.entries(scale)
             .map(([name, value]) => `  --${name}: ${value};`)
             .join('\n');
-        let scaleAsCssFile = `${selector} {\n${scaleAssCssProperties}\n}`;
+        let scaleAsCssFile = `${selector} {\n${scaleAsCssProperties}\n}`;
 
         if (isDark) {
-            const indented = scaleAssCssProperties
+            const indented = scaleAsCssProperties
                 .split('\n')
                 .map(prop => `  ${prop}`)
                 .join('\n');
