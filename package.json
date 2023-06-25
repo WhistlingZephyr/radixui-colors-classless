@@ -11,8 +11,8 @@
     "lint": "xo .",
     "prepublishOnly": "pnpm run lint",
     "preversion": "pnpm run lint",
-    "version": "pnpm run format && git add .",
-    "postversion": "git push && git push --tags",
+    "release": "standard-version --skip.changelog",
+    "postrelease": "git push --follow-tags origin main && npm publish",
     "prepare": "husky install"
   },
   "repository": {
@@ -37,6 +37,7 @@
     "@types/node": "^20.3.1",
     "esbuild": "^0.18.8",
     "husky": "^8.0.3",
+    "standard-version": "^9.5.0",
     "typescript": "^5.1.3",
     "xo": "^0.54.2"
   }
