@@ -1,4 +1,4 @@
-import {writeFile} from 'node:fs/promises';
+import {mkdir, writeFile} from 'node:fs/promises';
 import * as allColorScales from './colors/src/index';
 
 Promise.all(
@@ -21,6 +21,7 @@ Promise.all(
             scaleAsCssFile += `\n\n@media only screen and (prefers-color-scheme: dark) {\n  :root:not([data-theme="light"]) {\n${indented}\n  }\n}`;
         }
 
+        await mkdir('lib/', {recursive: true});
         return writeFile('lib/' + colorScaleName + '.css', scaleAsCssFile);
     }),
 )
