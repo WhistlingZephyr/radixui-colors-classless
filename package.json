@@ -12,7 +12,8 @@
     "prepublishOnly": "pnpm run lint",
     "preversion": "pnpm run lint",
     "version": "pnpm run format && git add .",
-    "postversion": "git push && git push --tags"
+    "postversion": "git push && git push --tags",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
