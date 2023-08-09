@@ -13,5 +13,5 @@ npm i radixui-colors-classless
 ## Usage
 
 ```css
-@import url("radixui-colors-classless/lib/amber.css");
+@import "radixui-colors-classless/lib/amber.css";
 ```
