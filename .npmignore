@@ -2,11 +2,13 @@ node_modules
 scripts
 colors
 .husky
+.vscode
 .gitignore
 .gitmodules
 tsconfig.json
 .prettierrc
 .editorconfig
-commitlint.config.js
+.commitlintrc.json
+.markdownlint.jsonc
 pnpm-lock.yaml
-xo.config.js
+xo.config.cjs
