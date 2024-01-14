@@ -110,8 +110,6 @@ Forcing a color scheme:
 
 You can check the format of the CSS files used at <https://www.npmjs.com/package/radixui-colors-classless?activeTab=code>
 
-### Changing color scheme
-
 ## Editor Integration
 
 ### VSCode
