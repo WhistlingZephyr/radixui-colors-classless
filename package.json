@@ -1,14 +1,20 @@
 {
   "name": "radixui-colors-classless",
   "version": "0.1.6",
+  "type": "module",
   "description": "Classless version of @radix-ui/colors",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-js": "tsc && esbuild build.ts --bundle --platform=node --outfile=build.js",
-    "build-css": "node build.js",
-    "build": "pnpm run build-js && pnpm run build-css",
-    "format": "xo --fix .",
-    "lint": "xo .",
+    "clean": "rimraf -g \"*.css\" \"scripts/*.js\"",
+    "build:js": "tsc && esbuild scripts/build.ts --bundle --platform=node --format=esm --outfile=scripts/build.js",
+    "build:css": "node scripts/build.js",
+    "build": "pnpm run clean && pnpm run build:js && pnpm run build:css",
+    "lint:xo": "xo .",
+    "lint:md": "markdownlint --ignore-path ./.gitignore --ignore ./colors \"**/*.md\"",
+    "fix:xo": "xo --fix .",
+    "fix:md": "pnpm run lint:md -- --fix",
+    "fix": "pnpm run \"/^fix:.*/\"",
+    "lint": "pnpm run \"/^lint:.*/\"",
     "prepublishOnly": "pnpm run lint",
     "preversion": "pnpm run lint",
     "release": "standard-version --skip.changelog",
@@ -32,13 +38,18 @@
   },
   "homepage": "https://github.com/WhistlingZephyr/radixui-colors-classless#readme",
   "devDependencies": {
-    "@commitlint/cli": "^17.6.6",
-    "@commitlint/config-conventional": "^17.6.6",
-    "@types/node": "^20.3.1",
-    "esbuild": "^0.18.8",
+    "@commitlint/cli": "^18.4.4",
+    "@commitlint/config-conventional": "^18.4.4",
+    "@types/node": "^20.11.0",
+    "esbuild": "^0.19.11",
     "husky": "^8.0.3",
+    "markdownlint-cli": "^0.38.0",
+    "rimraf": "^5.0.5",
     "standard-version": "^9.5.0",
-    "typescript": "^5.1.3",
-    "xo": "^0.54.2"
+    "typescript": "^5.3.3",
+    "xo": "^0.56.0"
+  },
+  "dependencies": {
+    "@radix-ui/colors": "^3.0.0"
   }
 }

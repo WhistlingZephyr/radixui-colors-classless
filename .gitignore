@@ -1,6 +1,6 @@
 # Extra
-lib
-build.js
+*.js
+*.css
 
 # Logs
 logs
