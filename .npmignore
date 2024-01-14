@@ -1,6 +1,5 @@
 node_modules
-build.ts
-build.js
+scripts
 colors
 .husky
 .gitignore

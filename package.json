@@ -18,7 +18,7 @@
     "prepublishOnly": "pnpm run lint",
     "preversion": "pnpm run lint",
     "release": "standard-version --skip.changelog",
-    "postrelease": "git push --follow-tags origin main && npm publish",
+    "postrelease": "npm run build && git push --follow-tags origin main && npm publish",
     "prepare": "husky install"
   },
   "repository": {
